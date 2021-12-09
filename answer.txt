@@ -1,0 +1,47 @@
+ПРОСТО ЗАПУСК
+
+Build #2 (Dec 9, 2021, 4:14:19 PM)
+
+BUILD SUCCESSFUL in 7s
+4 actionable tasks: 4 executed
+Build step 'Invoke Gradle script' changed build result to SUCCESS
+Finished: SUCCESS
+
+
+
+ЗАПУСК С ПУБЛИКАЦИЕЙ ТЕСТОВ
+
+Build #5 (Dec 9, 2021, 4:23:28 PM)
+
+BUILD SUCCESSFUL in 8s
+4 actionable tasks: 4 executed
+Build step 'Invoke Gradle script' changed build result to SUCCESS
+Recording test results
+[Checks API] No suitable checks publisher found.
+Finished: SUCCESS
+
+
+
+ОШИБКА В ИСХОДНОМ КОДЕ ПРИВОДЯЩЯЯ К ПАДЕНИЮ ТЕСТА
+
+Build #7 (Dec 9, 2021, 4:35:09 PM)
+
+> Task :test FAILED
+
+testproject.CalculatorTest > testSum FAILED
+    org.junit.ComparisonFailure at CalculatorTest.java:10
+
+5 tests completed, 1 failed
+
+FAILURE: Build failed with an exception.
+
+BUILD FAILED in 6s
+4 actionable tasks: 4 executed
+Build step 'Invoke Gradle script' changed build result to FAILURE
+Build step 'Invoke Gradle script' marked build as failure
+Recording test results
+[Checks API] No suitable checks publisher found.
+Finished: FAILURE
+
+
+git revert <hash-commit>
